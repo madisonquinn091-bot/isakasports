@@ -117,7 +117,7 @@ export const certificates = [
       "Instructor: Eric Yeboah · Length: 1 total hour",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certSportsManagement.url,
+    image: certSportsManagement,
   },
   {
     title: "Managing Youth Sports",
@@ -127,7 +127,7 @@ export const certificates = [
       "Instructor: Eric Yeboah · Length: 2 total hours",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certManagingYouthSports.url,
+    image: certManagingYouthSports,
   },
   {
     title: "Become a Professional Football (Soccer) Coach",
@@ -137,7 +137,7 @@ export const certificates = [
       "Instructor: Volodymyr Kartashov · Length: 4 total hours",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certProfessionalFootballCoach.url,
+    image: certProfessionalFootballCoach,
   },
   {
     title: "Grade IV Coaching Certificate (Football)",
@@ -147,7 +147,7 @@ export const certificates = [
       "Grade: Merit Lower",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certGradeIvCoaching.url,
+    image: certGradeIvCoaching,
   },
   {
     title: "Testimonial — Grade IV Coaching Course in Football",
@@ -157,7 +157,7 @@ export const certificates = [
       "Overall grade: Merit Lower",
       "Awarded to Iwu Bennett Robert",
     ],
-    image: certTestimonialGradeIv.url,
+    image: certTestimonialGradeIv,
   },
   {
     title: "How to Analyze Football (Soccer) – Basics",
@@ -167,7 +167,7 @@ export const certificates = [
       "Instructor: Hamza El Kadioui · Length: 2.5 total hours",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certAnalyzeFootball.url,
+    image: certAnalyzeFootball,
   },
   {
     title: "Football Manager: become a Master Manager (up to FM24!)",
@@ -177,7 +177,7 @@ export const certificates = [
       "Instructor: Master Manager · Length: 4 total hours",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certFootballManager.url,
+    image: certFootballManager,
   },
 ];
 
