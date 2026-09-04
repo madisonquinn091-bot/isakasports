@@ -88,7 +88,7 @@ function Home() {
             <img
               src={images.coachPortrait}
               alt={`Portrait of ${coach.name}`}
-              className="w-full object-cover"
+              className="max-h-[34rem] w-full object-cover object-top"
             />
             <div className="border-t border-border px-5 py-4">
               <p className="font-display text-lg font-bold text-primary">{coach.name}</p>
