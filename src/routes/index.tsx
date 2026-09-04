@@ -33,47 +33,50 @@ function Home() {
         <img
           src={images.heroMedals}
           alt="Young players receiving medals at an ISAKA Sports tournament"
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+          className="absolute inset-0 -z-20 h-full w-full scale-105 object-cover object-center"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/85 via-primary/70 to-primary/90" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/80 via-primary/55 to-primary/90" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,transparent_0%,color-mix(in_oklab,var(--primary)_45%,transparent)_100%)]" />
 
-        <div className="container-page flex min-h-[34rem] flex-col items-center justify-center py-24 text-center text-primary-foreground md:min-h-[40rem]">
-          <span className="rounded-full border border-gold/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+        <div className="container-page flex min-h-[36rem] flex-col items-center justify-center py-28 text-center text-primary-foreground md:min-h-[42rem]">
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-gold/50 bg-primary/40 px-5 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-gold backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
             Sports Development &amp; Consultancy
           </span>
-          <h1 className="mt-6 max-w-4xl text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
+          <h1 className="mt-7 max-w-4xl text-balance text-[2.6rem] font-bold leading-[1.02] tracking-tight drop-shadow-sm sm:text-6xl md:text-7xl">
             ISAKA Sports Global Ventures Ltd
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed opacity-95 sm:text-lg">
+          <div className="mt-7 h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <p className="mt-7 max-w-2xl text-base leading-relaxed opacity-95 sm:text-lg">
             Building winning teams and disciplined young athletes across Nigeria — from
             grassroots academies to the Nigeria Oil and Gas Industry Games. Led by Head
             Coach {coach.name}.
           </p>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              to="/coach"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-gold-foreground transition-transform hover:-translate-y-0.5"
-            >
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <Link to="/coach" className="btn-gold hover:btn-gold-hover">
               Coach Profile &amp; Certificates <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/gallery"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/50 px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 bg-primary-foreground/5 px-7 py-3.5 text-sm font-semibold text-primary-foreground backdrop-blur-sm transition-all duration-300 hover:border-primary-foreground/70 hover:bg-primary-foreground/15"
             >
               View Gallery
             </Link>
           </div>
 
-          <dl className="mt-14 grid w-full max-w-3xl grid-cols-2 gap-6 border-t border-primary-foreground/25 pt-8 sm:grid-cols-4">
+          <dl className="mt-16 grid w-full max-w-3xl grid-cols-2 sm:grid-cols-4">
             {[
               ["2023", "Incorporated"],
               ["35+", "Years in football"],
               ["7", "Certifications"],
               ["NOGIG", "Since 2018"],
-            ].map(([value, label]) => (
-              <div key={label}>
-                <dt className="font-display text-2xl font-bold text-gold">{value}</dt>
-                <dd className="mt-1 text-xs uppercase tracking-[0.12em] opacity-85">
+            ].map(([value, label], i) => (
+              <div
+                key={label}
+                className={`px-4 py-5 ${i > 0 ? "border-l border-primary-foreground/15" : ""} max-sm:[&:nth-child(3)]:border-l-0 max-sm:[&:nth-child(n+3)]:border-t max-sm:[&:nth-child(n+3)]:border-primary-foreground/15`}
+              >
+                <dt className="font-display text-3xl font-bold text-gold">{value}</dt>
+                <dd className="mt-1.5 text-[0.68rem] font-medium uppercase tracking-[0.16em] opacity-80">
                   {label}
                 </dd>
               </div>

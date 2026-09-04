@@ -1,38 +1,38 @@
-import heroMedals from "@/assets/hero-medals.jpg.asset.json";
-import heroCollage from "@/assets/hero-collage.jpg.asset.json";
-import coachPortrait from "@/assets/coach-portrait.jpg.asset.json";
-import neplTraining from "@/assets/nepl-training.jpg.asset.json";
-import businessExpo from "@/assets/business-expo.jpg.asset.json";
-import consultingEvents from "@/assets/consulting-events.jpg.asset.json";
-import youthMatches from "@/assets/youth-matches.jpg.asset.json";
-import awardsHonour from "@/assets/awards-honour.jpg.asset.json";
-import intlSchoolsSoccer from "@/assets/intl-schools-soccer.jpg.asset.json";
-import riversAngelsTravel from "@/assets/rivers-angels-travel.jpg.asset.json";
-import riversAngelsTeam from "@/assets/rivers-angels-team.jpg.asset.json";
-import grassrootsFootball from "@/assets/grassroots-football.jpg.asset.json";
-import isakaLogo from "@/assets/isaka-logo.png.asset.json";
-import certSportsManagement from "@/assets/cert-sports-management.jpg.asset.json";
-import certManagingYouthSports from "@/assets/cert-managing-youth-sports.jpg.asset.json";
-import certProfessionalFootballCoach from "@/assets/cert-professional-football-coach.jpg.asset.json";
-import certGradeIvCoaching from "@/assets/cert-grade-iv-coaching.jpg.asset.json";
-import certTestimonialGradeIv from "@/assets/cert-testimonial-grade-iv.jpg.asset.json";
-import certAnalyzeFootball from "@/assets/cert-analyze-football.jpg.asset.json";
-import certFootballManager from "@/assets/cert-football-manager.jpg.asset.json";
+import heroMedals from "@/assets/hero-medals.jpg";
+import heroCollage from "@/assets/hero-collage.jpg";
+import coachPortrait from "@/assets/coach-portrait.jpg";
+import neplTraining from "@/assets/nepl-training.jpg";
+import businessExpo from "@/assets/business-expo.jpg";
+import consultingEvents from "@/assets/consulting-events.jpg";
+import youthMatches from "@/assets/youth-matches.jpg";
+import awardsHonour from "@/assets/awards-honour.jpg";
+import intlSchoolsSoccer from "@/assets/intl-schools-soccer.jpg";
+import riversAngelsTravel from "@/assets/rivers-angels-travel.jpg";
+import riversAngelsTeam from "@/assets/rivers-angels-team.jpg";
+import grassrootsFootball from "@/assets/grassroots-football.jpg";
+import isakaLogo from "@/assets/isaka-logo.png";
+import certSportsManagement from "@/assets/cert-sports-management.jpg";
+import certManagingYouthSports from "@/assets/cert-managing-youth-sports.jpg";
+import certProfessionalFootballCoach from "@/assets/cert-professional-football-coach.jpg";
+import certGradeIvCoaching from "@/assets/cert-grade-iv-coaching.jpg";
+import certTestimonialGradeIv from "@/assets/cert-testimonial-grade-iv.jpg";
+import certAnalyzeFootball from "@/assets/cert-analyze-football.jpg";
+import certFootballManager from "@/assets/cert-football-manager.jpg";
 
 export const images = {
-  heroMedals: heroMedals.url,
-  heroCollage: heroCollage.url,
-  coachPortrait: coachPortrait.url,
-  neplTraining: neplTraining.url,
-  businessExpo: businessExpo.url,
-  consultingEvents: consultingEvents.url,
-  youthMatches: youthMatches.url,
-  awardsHonour: awardsHonour.url,
-  intlSchoolsSoccer: intlSchoolsSoccer.url,
-  riversAngelsTravel: riversAngelsTravel.url,
-  riversAngelsTeam: riversAngelsTeam.url,
-  grassrootsFootball: grassrootsFootball.url,
-  logo: isakaLogo.url,
+  heroMedals,
+  heroCollage,
+  coachPortrait,
+  neplTraining,
+  businessExpo,
+  consultingEvents,
+  youthMatches,
+  awardsHonour,
+  intlSchoolsSoccer,
+  riversAngelsTravel,
+  riversAngelsTeam,
+  grassrootsFootball,
+  logo: isakaLogo,
 };
 
 export const company = {
@@ -117,7 +117,7 @@ export const certificates = [
       "Instructor: Eric Yeboah · Length: 1 total hour",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certSportsManagement.url,
+    image: certSportsManagement,
   },
   {
     title: "Managing Youth Sports",
@@ -127,7 +127,7 @@ export const certificates = [
       "Instructor: Eric Yeboah · Length: 2 total hours",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certManagingYouthSports.url,
+    image: certManagingYouthSports,
   },
   {
     title: "Become a Professional Football (Soccer) Coach",
@@ -137,7 +137,7 @@ export const certificates = [
       "Instructor: Volodymyr Kartashov · Length: 4 total hours",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certProfessionalFootballCoach.url,
+    image: certProfessionalFootballCoach,
   },
   {
     title: "Grade IV Coaching Certificate (Football)",
@@ -147,7 +147,7 @@ export const certificates = [
       "Grade: Merit Lower",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certGradeIvCoaching.url,
+    image: certGradeIvCoaching,
   },
   {
     title: "Testimonial — Grade IV Coaching Course in Football",
@@ -157,7 +157,7 @@ export const certificates = [
       "Overall grade: Merit Lower",
       "Awarded to Iwu Bennett Robert",
     ],
-    image: certTestimonialGradeIv.url,
+    image: certTestimonialGradeIv,
   },
   {
     title: "How to Analyze Football (Soccer) – Basics",
@@ -167,7 +167,7 @@ export const certificates = [
       "Instructor: Hamza El Kadioui · Length: 2.5 total hours",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certAnalyzeFootball.url,
+    image: certAnalyzeFootball,
   },
   {
     title: "Football Manager: become a Master Manager (up to FM24!)",
@@ -177,7 +177,7 @@ export const certificates = [
       "Instructor: Master Manager · Length: 4 total hours",
       "Awarded to Iwu Benneth Robert",
     ],
-    image: certFootballManager.url,
+    image: certFootballManager,
   },
 ];
 
