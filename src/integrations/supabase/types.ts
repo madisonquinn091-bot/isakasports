@@ -55,13 +55,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      registration_counts: {
-        Args: never
-        Returns: {
-          category: string
-          total: number
-        }[]
-      }
+      [_ in never]: never
     }
     Enums: {
       [_ in never]: never
