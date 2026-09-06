@@ -14,13 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      registrations: {
+        Row: {
+          applicant_name: string
+          category: string
+          created_at: string
+          details: Json
+          email: string
+          event_name: string | null
+          id: string
+          organisation: string | null
+          phone: string
+        }
+        Insert: {
+          applicant_name: string
+          category: string
+          created_at?: string
+          details?: Json
+          email: string
+          event_name?: string | null
+          id?: string
+          organisation?: string | null
+          phone: string
+        }
+        Update: {
+          applicant_name?: string
+          category?: string
+          created_at?: string
+          details?: Json
+          email?: string
+          event_name?: string | null
+          id?: string
+          organisation?: string | null
+          phone?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      registration_counts: {
+        Args: never
+        Returns: {
+          category: string
+          total: number
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
