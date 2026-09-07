@@ -13,6 +13,8 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CoachRouteImport } from './routes/coach'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as RegisterIndexRouteImport } from './routes/register.index'
+import { Route as RegisterTypeRouteImport } from './routes/register.$type'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +36,32 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RegisterIndexRoute = RegisterIndexRouteImport.update({
+  id: '/register/',
+  path: '/register/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterTypeRoute = RegisterTypeRouteImport.update({
+  id: '/register/$type',
+  path: '/register/$type',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/coach': typeof CoachRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
+  '/register/$type': typeof RegisterTypeRoute
+  '/register/': typeof RegisterIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/coach': typeof CoachRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
+  '/register/$type': typeof RegisterTypeRoute
+  '/register': typeof RegisterIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +69,23 @@ export interface FileRoutesById {
   '/coach': typeof CoachRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
+  '/register/$type': typeof RegisterTypeRoute
+  '/register/': typeof RegisterIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/coach' | '/contact' | '/gallery'
+  fullPaths:
+    '/' | '/coach' | '/contact' | '/gallery' | '/register/$type' | '/register/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/coach' | '/contact' | '/gallery'
-  id: '__root__' | '/' | '/coach' | '/contact' | '/gallery'
+  to: '/' | '/coach' | '/contact' | '/gallery' | '/register/$type' | '/register'
+  id:
+    | '__root__'
+    | '/'
+    | '/coach'
+    | '/contact'
+    | '/gallery'
+    | '/register/$type'
+    | '/register/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +93,8 @@ export interface RootRouteChildren {
   CoachRoute: typeof CoachRoute
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
+  RegisterTypeRoute: typeof RegisterTypeRoute
+  RegisterIndexRoute: typeof RegisterIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +127,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/register/': {
+      id: '/register/'
+      path: '/register'
+      fullPath: '/register/'
+      preLoaderRoute: typeof RegisterIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register/$type': {
+      id: '/register/$type'
+      path: '/register/$type'
+      fullPath: '/register/$type'
+      preLoaderRoute: typeof RegisterTypeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +149,8 @@ const rootRouteChildren: RootRouteChildren = {
   CoachRoute: CoachRoute,
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
+  RegisterTypeRoute: RegisterTypeRoute,
+  RegisterIndexRoute: RegisterIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
