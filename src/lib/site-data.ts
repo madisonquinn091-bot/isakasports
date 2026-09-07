@@ -11,13 +11,6 @@ import riversAngelsTravel from "@/assets/rivers-angels-travel.jpg";
 import riversAngelsTeam from "@/assets/rivers-angels-team.jpg";
 import grassrootsFootball from "@/assets/grassroots-football.jpg";
 import isakaLogo from "@/assets/isaka-logo.png";
-import certSportsManagement from "@/assets/cert-sports-management.jpg";
-import certManagingYouthSports from "@/assets/cert-managing-youth-sports.jpg";
-import certProfessionalFootballCoach from "@/assets/cert-professional-football-coach.jpg";
-import certGradeIvCoaching from "@/assets/cert-grade-iv-coaching.jpg";
-import certTestimonialGradeIv from "@/assets/cert-testimonial-grade-iv.jpg";
-import certAnalyzeFootball from "@/assets/cert-analyze-football.jpg";
-import certFootballManager from "@/assets/cert-football-manager.jpg";
 
 export const images = {
   heroMedals,
@@ -106,79 +99,6 @@ export const awards = [
   "Took NNPC to semi-final — Kaduna Refinery Company.",
   "Led team to NNPC Games Final — Eleme Petrochemical LTD, 2003–2006.",
   "Coached the team to win the International Schools Soccer Tournament.",
-];
-
-export const certificates = [
-  {
-    title: "Sports Management Fundamental",
-    issuer: "Udemy — Certificate of Completion",
-    lines: [
-      "Date: March 26, 2026",
-      "Instructor: Eric Yeboah · Length: 1 total hour",
-      "Awarded to Iwu Benneth Robert",
-    ],
-    image: certSportsManagement,
-  },
-  {
-    title: "Managing Youth Sports",
-    issuer: "Udemy — Certificate of Completion",
-    lines: [
-      "Date: March 26, 2026",
-      "Instructor: Eric Yeboah · Length: 2 total hours",
-      "Awarded to Iwu Benneth Robert",
-    ],
-    image: certManagingYouthSports,
-  },
-  {
-    title: "Become a Professional Football (Soccer) Coach",
-    issuer: "Udemy — Certificate of Completion",
-    lines: [
-      "Date: Dec. 1, 2024",
-      "Instructor: Volodymyr Kartashov · Length: 4 total hours",
-      "Awarded to Iwu Benneth Robert",
-    ],
-    image: certProfessionalFootballCoach,
-  },
-  {
-    title: "Grade IV Coaching Certificate (Football)",
-    issuer: "Sports Institute of Rivers State, Isaka, Port Harcourt",
-    lines: [
-      "Date: 22nd November, 1989",
-      "Grade: Merit Lower",
-      "Awarded to Iwu Benneth Robert",
-    ],
-    image: certGradeIvCoaching,
-  },
-  {
-    title: "Testimonial — Grade IV Coaching Course in Football",
-    issuer: "Sports Institute of Rivers State, Isaka, Port Harcourt",
-    lines: [
-      "Date: 22nd November, 1989",
-      "Overall grade: Merit Lower",
-      "Awarded to Iwu Bennett Robert",
-    ],
-    image: certTestimonialGradeIv,
-  },
-  {
-    title: "How to Analyze Football (Soccer) – Basics",
-    issuer: "Udemy — Certificate of Completion",
-    lines: [
-      "Date: Dec. 1, 2024",
-      "Instructor: Hamza El Kadioui · Length: 2.5 total hours",
-      "Awarded to Iwu Benneth Robert",
-    ],
-    image: certAnalyzeFootball,
-  },
-  {
-    title: "Football Manager: become a Master Manager (up to FM24!)",
-    issuer: "Udemy — Certificate of Completion",
-    lines: [
-      "Date: Dec. 1, 2024",
-      "Instructor: Master Manager · Length: 4 total hours",
-      "Awarded to Iwu Benneth Robert",
-    ],
-    image: certFootballManager,
-  },
 ];
 
 export const education = [

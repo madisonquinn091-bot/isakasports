@@ -1,24 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { GraduationCap, Mail, MapPin, Phone, X } from "lucide-react";
+import { GraduationCap, Mail, MapPin, Phone } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { certificates, coach, education, images } from "@/lib/site-data";
+import { ServicesSection } from "@/components/services-section";
+import { coach, education, images } from "@/lib/site-data";
 
 export const Route = createFileRoute("/coach")({
   head: () => ({
     meta: [
-      { title: "Dr. Ben Iwu Robert — Coach Profile & Certificates | ISAKA Sports" },
+      { title: "Dr. Ben Iwu Robert — Head Coach | ISAKA Sports" },
       {
         name: "description",
         content:
-          "Coach profile, certifications and academic background of Dr. Ben Iwu Robert, Head Coach at ISAKA Sports Global Ventures Ltd.",
+          "Coach profile and academic background of Dr. Ben Iwu Robert, Head Coach at ISAKA Sports Global Ventures Ltd.",
       },
-      { property: "og:title", content: "Coach Profile & Certificates — Dr. Ben Iwu Robert" },
+      { property: "og:title", content: "Coach Profile — Dr. Ben Iwu Robert" },
       {
         property: "og:description",
         content:
-          "Every certificate on record, plus the coaching and academic background of Dr. Ben Iwu Robert.",
+          "The coaching career and academic background of Dr. Ben Iwu Robert.",
       },
     ],
   }),
@@ -26,8 +26,6 @@ export const Route = createFileRoute("/coach")({
 });
 
 function CoachPage() {
-  const [zoom, setZoom] = useState<{ src: string; title: string } | null>(null);
-
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -66,47 +64,7 @@ function CoachPage() {
         </div>
       </section>
 
-      <section className="container-page py-20">
-        <span className="eyebrow">Certifications &amp; credentials</span>
-        <h2 className="mt-3 text-3xl font-bold text-primary sm:text-4xl">
-          Every certificate on record
-        </h2>
-        <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-          Click any certificate to view it full size. Names and dates are reproduced exactly
-          as they appear on the original documents.
-        </p>
-
-        <div className="mt-10 grid gap-8 md:grid-cols-2">
-          {certificates.map((c) => (
-            <article
-              key={c.title}
-              className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
-            >
-              <button
-                type="button"
-                onClick={() => setZoom({ src: c.image, title: c.title })}
-                className="block w-full cursor-zoom-in bg-secondary/40"
-              >
-                <img
-                  src={c.image}
-                  alt={c.title}
-                  loading="lazy"
-                  className="max-h-[32rem] w-full object-contain"
-                />
-              </button>
-              <div className="border-t border-border p-6">
-                <h3 className="text-lg font-bold text-primary">{c.title}</h3>
-                <p className="mt-1 text-sm font-medium text-foreground/80">{c.issuer}</p>
-                <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
-                  {c.lines.map((l) => (
-                    <li key={l}>{l}</li>
-                  ))}
-                </ul>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ServicesSection />
 
       <section className="bg-secondary/50 py-20">
         <div className="container-page">
@@ -130,28 +88,6 @@ function CoachPage() {
           </div>
         </div>
       </section>
-
-      {zoom && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-foreground/90 p-4"
-          onClick={() => setZoom(null)}
-        >
-          <button
-            type="button"
-            aria-label="Close"
-            className="absolute right-5 top-5 rounded-full bg-background/90 p-2 text-foreground"
-            onClick={() => setZoom(null)}
-          >
-            <X className="h-5 w-5" />
-          </button>
-          <img
-            src={zoom.src}
-            alt={zoom.title}
-            className="max-h-[92vh] max-w-full rounded-lg object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
 
       <SiteFooter />
     </div>

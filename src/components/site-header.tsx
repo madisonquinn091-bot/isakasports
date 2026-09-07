@@ -5,7 +5,8 @@ import { images, company } from "@/lib/site-data";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/coach", label: "Coach & Certificates" },
+  { to: "/coach", label: "Coach" },
+  { to: "/register", label: "Register" },
   { to: "/gallery", label: "Gallery" },
   { to: "/contact", label: "Contact" },
 ];

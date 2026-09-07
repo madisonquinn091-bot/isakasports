@@ -58,7 +58,12 @@ export function SiteFooter() {
             </li>
             <li>
               <Link to="/coach" className="hover:underline">
-                Coach &amp; Certificates
+                Coach
+              </Link>
+            </li>
+            <li>
+              <Link to="/register" className="hover:underline">
+                Registration
               </Link>
             </li>
             <li>

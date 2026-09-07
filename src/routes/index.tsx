@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BadgeCheck, Building2, Trophy } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { ServicesSection } from "@/components/services-section";
 import { awards, coach, company, experience, gallery, images } from "@/lib/site-data";
 
 export const Route = createFileRoute("/")({
@@ -53,8 +54,8 @@ function Home() {
             Coach {coach.name}.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Link to="/coach" className="btn-gold hover:btn-gold-hover">
-              Coach Profile &amp; Certificates <ArrowRight className="h-4 w-4" />
+            <Link to="/register" className="btn-gold hover:btn-gold-hover">
+              Register Now <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/gallery"
@@ -250,6 +251,10 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <ServicesSection tone="muted" />
+
+
 
       <section className="container-page py-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
